@@ -8,6 +8,8 @@ use base 'Mojolicious';
 __PACKAGE__->attr('config');
 __PACKAGE__->attr('config_file');
 
+use Mojo::JSON::Any;
+
 sub test_mode {
     my $self = shift;
 
@@ -43,6 +45,7 @@ sub startup {
 
     # CouchDB
     $self->plugin(couchdb => $config->{couchdb});
+    $self->couchdb->json_class('Mojo::JSON::Any');
 
     # Register controller
     $self->controller_class('MojoliciousApps::Controller');

@@ -4,3 +4,6 @@
 [submodule "extlib/mojox-common"]
 	path = extlib/mojox-common
 	url = http://github.com/vti/mojox-common.git
+[submodule "extlib/mojo-json-any"]
+	path = extlib/mojo-json-any
+	url = http://github.com/vti/mojo-json-any.git
