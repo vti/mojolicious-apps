@@ -43,6 +43,9 @@ sub startup {
     # Default charset
     $self->plugin(charset => {charset => 'utf-8'});
 
+    # Validator
+    $self->plugin('validator');
+
     # CouchDB
     $self->plugin(couchdb => $config->{couchdb});
     $self->couchdb->json_class('Mojo::JSON::Any');
