@@ -1,0 +1,6 @@
+[submodule "extlib/mojo"]
+	path = extlib/mojo
+	url = http://github.com/kraih/mojo.git
+[submodule "extlib/mojox-common"]
+	path = extlib/mojox-common
+	url = http://github.com/vti/mojox-common.git
