@@ -25,8 +25,28 @@ sub run {
             my ($couchdb, $db, $error) = @_;
 
             warn $error if $error;
+
+            $couchdb->create_design(
+                {   name   => 'default',
+                    params => {
+                        views => {all => {map => <<'EOF'}}
+function(doc) {
+    emit(null, doc)
+}
+EOF
+                    }
+                } => sub {
+                    my ($couchdb, $design, $error) = @_;
+
+                    warn $error if $error;
+
+                    Mojo::IOLoop->singleton->stop;
+                }
+            );
         }
     );
+
+    Mojo::IOLoop->singleton->start;
 
     return $self;
 }

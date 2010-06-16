@@ -25,8 +25,12 @@ sub run {
             my ($couchdb, $error) = @_;
 
             warn $error if $error;
+
+            Mojo::IOLoop->singleton->stop;
         }
     );
+
+    Mojo::IOLoop->singleton->start;
 
     return $self;
 }
