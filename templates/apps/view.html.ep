@@ -1,0 +1,5 @@
+View
+
+Id: <%= $app->{id} %><br />
+Title: <%= $app->{title} %><br />
+Description: <%= $app->{description} %><br />

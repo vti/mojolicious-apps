@@ -1,1 +1,8 @@
 % layout 'default';
+
+% foreach my $doc (@$documents) {
+    <div>
+    Title: <%= $doc->{title} %><br/>
+    Description: <%= $doc->{description} %>
+    </div>
+% }

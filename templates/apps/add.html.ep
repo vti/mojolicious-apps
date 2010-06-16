@@ -1,0 +1,19 @@
+% layout 'default';
+
+<%= form_for 'add', method => 'post' => {%>
+
+    <div class="form-field">
+        <%= label 'title' => {%>Title<%}%>
+        <%= input 'title' %>
+        <%= error 'title' %>
+    </div>
+
+    <div class="form-field">
+        <%= label 'description' => {%>Description<%}%>
+        <textarea name="description"></textarea>
+        <%= error 'description' %>
+    </div>
+
+    <%= input 'submit', type => 'submit' %>
+
+<%}%>

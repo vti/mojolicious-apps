@@ -1,0 +1,17 @@
+<%= form_for 'login', method => 'post' => {%>
+
+    <div class="form-field">
+        <%= label 'login' => {%>Login<%}%>
+        <%= input 'login' %>
+        <%= error 'login' %>
+    </div>
+
+    <div class="form-field">
+        <%= label 'password' => {%>Password<%}%>
+        <%= input 'password' %>
+        <%= error 'password' %>
+    </div>
+
+    <%= input 'submit', type => 'submit' %>
+
+<%}%>
