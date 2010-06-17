@@ -16,6 +16,12 @@ a:hover {
 }
 
 #container {
+    width:600px;
+    margin:auto;
+}
+
+#menu {
+    text-align:right;
 }
 
 #intro {
@@ -28,8 +34,6 @@ a:hover {
     padding:1em;
 
     background:#356AA0;
-    width:550px;
-    margin:auto;
 
     border-radius: 5px;
     -moz-border-radius: 5px;
@@ -56,11 +60,6 @@ a:hover {
     /*color:#ffffff;*/
     /*color:#ccc;*/
     padding:1em;
-    margin:auto;
-}
-
-#header, #footer {
-    width:550px;
     margin:auto;
 }
 

@@ -10,6 +10,9 @@
             <div id="header">
                 <%= link_to 'root' => {%><%= img '/logo.png' %><%}%>
             </div>
+            <div id="menu">
+                <%= link_to 'root' => {%>Feedback<%}%>
+            </div>
             <div id="main">
                 <div id="content">
                     <%== content %>
