@@ -55,8 +55,8 @@ sub add {
 
     my $validator = $self->validator;
     $validator->field('title')->required(1)->length(3, 30);
-    $validator->field('website')->required(1)->length(3, 255);
-    $validator->field('repository')->required(1)->length(3, 255);
+    $validator->field('website')->length(3, 255);
+    $validator->field('repository')->length(3, 255);
     $validator->field('author')->required(1)->length(3, 30);
     $validator->field('description')->length(3, 255);
 

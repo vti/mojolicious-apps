@@ -1,14 +1,18 @@
+% layout 'default';
+
+<h2>Login</h2>
+
 <%= form_for 'login', method => 'post' => {%>
 
     <div class="form-field">
-        <%= label 'login' => {%>Login<%}%>
-        <%= input 'login' %>
+        <%= label 'login' => {%>Login<%}%><br />
+        <%= input 'login' %><br />
         <%= error 'login' %>
     </div>
 
     <div class="form-field">
-        <%= label 'password' => {%>Password<%}%>
-        <%= input 'password' %>
+        <%= label 'password' => {%>Password<%}%><br />
+        <%= input 'password', type => 'password' %><br />
         <%= error 'password' %>
     </div>
 

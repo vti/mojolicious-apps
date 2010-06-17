@@ -1,27 +1,27 @@
 % layout 'default';
 
-<div class="view">
+<h2><%= $doc->{title} %></h2>
 
-    <h2><%= $doc->{title} %></h2>
-
-    <div class="info">
-        <%= $doc->{description} %>
-    </div>
-
-    <table>
-        <tr>
-        <td>Website:&nbsp;</td><td><%= link_to $doc->{website} => {%><%= $doc->{website} %><%}%></td>
-        </tr>
-
-        <tr>
-        <td>Repository:&nbsp;</td><td><%= link_to $doc->{repository} => {%><%= $doc->{repository} %><%}%></td>
-        </tr>
-
-        <tr>
-        <td>Author:&nbsp;</td><td><%= $doc->{author} %></td>
-        </tr>
-    </table>
-
-    <h3>Screenshots</h3>
-
+<div class="info">
+    <%= $doc->{description} %>
 </div>
+
+<table>
+% if ($doc->{website}) {
+    <tr>
+    <td>Website:&nbsp;</td><td><%= link_to $doc->{website} => {%><%= $doc->{website} %><%}%></td>
+    </tr>
+% }
+
+% if ($doc->{website}) {
+    <tr>
+    <td>Repository:&nbsp;</td><td><%= link_to $doc->{repository} => {%><%= $doc->{repository} %><%}%></td>
+    </tr>
+% }
+
+    <tr>
+    <td>Author:&nbsp;</td><td><%= $doc->{author} %></td>
+    </tr>
+</table>
+
+<h3>Screenshots</h3>

@@ -1,34 +1,36 @@
 % layout 'default';
 
+<h2>Add application</h2>
+
 <%= form_for 'add', method => 'post' => {%>
 
     <div class="form-field">
-        <%= label 'title' => {%>Title<%}%>
-        <%= input 'title' %>
+        <%= label 'title' => {%>Title<%}%><br />
+        <%= input 'title' %><br />
         <%= error 'title' %>
     </div>
 
     <div class="form-field">
-        <%= label 'website' => {%>Website<%}%>
-        <%= input 'website' %>
+        <%= label 'website' => {%>Website<%}%><br />
+        <%= input 'website' %><br />
         <%= error 'website' %>
     </div>
 
     <div class="form-field">
-        <%= label 'repository' => {%>Repository<%}%>
-        <%= input 'repository' %>
+        <%= label 'repository' => {%>Repository<%}%><br />
+        <%= input 'repository' %><br />
         <%= error 'repository' %>
     </div>
 
     <div class="form-field">
-        <%= label 'author' => {%>Author<%}%>
-        <%= input 'author' %>
+        <%= label 'author' => {%>Author<%}%><br />
+        <%= input 'author' %><br />
         <%= error 'author' %>
     </div>
 
     <div class="form-field">
-        <%= label 'description' => {%>Description<%}%>
-        <textarea name="description"><%= param 'description' %></textarea>
+        <%= label 'description' => {%>Description<%}%><br />
+        <textarea name="description"><%= param 'description' %></textarea><br />
         <%= error 'description' %>
     </div>
 

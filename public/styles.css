@@ -98,7 +98,7 @@ a:hover {
     clear:both;
 }
 
-.view h2, .view h3 {
+#main h2, #main h3 {
     color:#000;
     text-shadow: #50a0f2 0px 1px 0px;
     text-align:center;
