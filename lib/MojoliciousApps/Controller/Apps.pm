@@ -40,7 +40,7 @@ sub view {
 
             return $self->render_not_found unless $document->rev;
 
-            $self->stash(app => {id => $document->id, %{$document->params}});
+            $self->stash(doc => {id => $document->id, %{$document->params}});
 
             return $self->finish;
         }
@@ -55,6 +55,9 @@ sub add {
 
     my $validator = $self->validator;
     $validator->field('title')->required(1)->length(3, 30);
+    $validator->field('website')->required(1)->length(3, 255);
+    $validator->field('repository')->required(1)->length(3, 255);
+    $validator->field('author')->required(1)->length(3, 30);
     $validator->field('description')->length(3, 255);
 
     my $ok = $validator->validate($self->req->params->to_hash);

@@ -9,8 +9,26 @@
     </div>
 
     <div class="form-field">
+        <%= label 'website' => {%>Website<%}%>
+        <%= input 'website' %>
+        <%= error 'website' %>
+    </div>
+
+    <div class="form-field">
+        <%= label 'repository' => {%>Repository<%}%>
+        <%= input 'repository' %>
+        <%= error 'repository' %>
+    </div>
+
+    <div class="form-field">
+        <%= label 'author' => {%>Author<%}%>
+        <%= input 'author' %>
+        <%= error 'author' %>
+    </div>
+
+    <div class="form-field">
         <%= label 'description' => {%>Description<%}%>
-        <textarea name="description"></textarea>
+        <textarea name="description"><%= param 'description' %></textarea>
         <%= error 'description' %>
     </div>
 

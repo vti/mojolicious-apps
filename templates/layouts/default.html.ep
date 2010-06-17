@@ -1,4 +1,24 @@
 <!doctype html><html>
-    <head><title>Welcome</title></head>
-    <body><%== content %></body>
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" href="/960/reset.css" type="text/css" />
+        <link rel="stylesheet" href="/960/text.css" type="text/css" />
+        <link rel="stylesheet" href="/styles.css" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <%= link_to 'root' => {%><%= img '/logo.png' %><%}%>
+            </div>
+            <div id="main">
+                <div id="content">
+                    <%== content %>
+                </div>
+            </div>
+            <div id="footer">
+                Powered by <%= link_to 'http://mojolicious.org' => {%>Mojolicious<%}%><br />
+                <%= link_to 'http://github.com/vti/mojolicious-apps' => {%>Source code<%}%>
+            </div>
+        </div>
+    </body>
 </html>

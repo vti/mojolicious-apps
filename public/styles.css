@@ -1,0 +1,116 @@
+body {
+    /*background:#8e8e8e;*/
+    background: #8e8e8e url('/bg.png');
+}
+
+h1, h2 {
+    padding:0.5em;
+}
+
+a:link, a:visited {
+    color:#000;
+}
+
+a:hover {
+    color:#000;
+}
+
+#container {
+}
+
+#intro {
+    text-align:center;
+    color:#ffffff;
+    margin-bottom:1em;
+}
+
+#main {
+    padding:1em;
+
+    background:#356AA0;
+    width:550px;
+    margin:auto;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    /* Firefox */
+    -moz-box-shadow: 3px 3px 5px #000;
+    /* WebKit */
+    -webkit-box-shadow: 3px 3px 5px #000;
+    /* Standard */
+    box-shadow: 3px 3px 5px #000;
+}
+
+#main a:link, #main a:visited {
+    color:#eee;
+}
+
+#main a:hover {
+    color:#ddd;
+}
+
+
+#content {
+    /*color:#ffffff;*/
+    /*color:#ccc;*/
+    padding:1em;
+    margin:auto;
+}
+
+#header, #footer {
+    width:550px;
+    margin:auto;
+}
+
+#header a:link, #header a:hover, #header a:visited {
+    color:#000;
+    text-shadow: #bbb 0px 1px 0px;
+    text-decoration:none;
+}
+
+#header {
+    padding:1.5em;
+    text-align:center;
+}
+
+#footer {
+    padding:1em;
+    text-align:center;
+}
+
+.row {
+}
+
+.icon {
+    border:0px;
+}
+
+.cell {
+    text-align:center;
+    text-shadow: #50a0f2 0px 1px 0px;
+    width:100px;
+    float:left;
+}
+
+.clear {
+    clear:both;
+}
+
+.view h2, .view h3 {
+    color:#000;
+    text-shadow: #50a0f2 0px 1px 0px;
+    text-align:center;
+}
+
+.info {
+    background:#fff;
+
+    padding:1em 1em 1em 1em;
+    margin-bottom:1em;
+
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

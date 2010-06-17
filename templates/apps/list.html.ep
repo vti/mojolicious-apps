@@ -1,8 +1,21 @@
 % layout 'default';
 
+<div id="intro">
+    Below are the applications written on top of the Mojolicious
+    <br />
+    Perl web framework. Click on image to see details.
+</div>
+
+<div class="row">
 % foreach my $doc (@$documents) {
-    <div>
-    Title: <%= $doc->{title} %><br/>
-    Description: <%= $doc->{description} %>
+
+    <div class="cell">
+        <%= link_to 'view' => {id => $doc->{id}} => {%>
+            <%= img '/twitter.png', title => $doc->{title}, class => 'icon', width => 100, height => 100 %><br />
+        <%}%>
+        <%= $doc->{title} %>
     </div>
+
 % }
+    <div class="clear"></div>
+</div>
