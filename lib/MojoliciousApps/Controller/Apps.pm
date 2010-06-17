@@ -63,12 +63,21 @@ sub add {
     my $ok = $validator->validate($self->req->params->to_hash);
     $self->stash(errors => $validator->errors), return unless $ok;
 
+    # Convert attachments
+    my $attachments = {};
+    if (my $icon = $self->req->upload('icon')) {
+        $attachments->{$icon->filename} = {
+            content_type => scalar $icon->headers->content_type,
+            data         => $icon->asset->slurp
+        };
+    }
+
     # Pause transaction
     $self->pause;
 
     # Create new document object
     $self->couchdb->create_document(
-        {params => $validator->values} => sub {
+        {params => $validator->values, attachments => $attachments} => sub {
             my ($couchdb, $document, $error) = @_;
 
             # Render exception

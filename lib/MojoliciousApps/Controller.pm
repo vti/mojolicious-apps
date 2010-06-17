@@ -13,4 +13,12 @@ sub is_admin {shift->session->{admin}}
 
 sub render_forbidden { shift->render('forbidden', status => 403) }
 
+sub render_not_found {
+    my $self = shift;
+
+    $self->SUPER::render_not_found;
+
+    $self->finish;
+}
+
 1;

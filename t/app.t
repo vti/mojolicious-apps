@@ -33,6 +33,8 @@ $t->post_form_ok('/login' => {login => 'vti', password => 'vti'})->status_is(302
 
 $t->get_ok('/login')->status_is(404);
 
+$t->get_ok('/apps/helo')->status_is(404);
+
 $t->post_form_ok('/add' => {title => 'foo', description => 'bar'})->status_is(302);
 
 $t->get_ok('/')->status_is(200)->content_like(qr/foo/);

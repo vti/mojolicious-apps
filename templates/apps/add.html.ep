@@ -2,7 +2,7 @@
 
 <h2>Add application</h2>
 
-<%= form_for 'add', method => 'post' => {%>
+<%= form_for 'add', method => 'post', enctype => 'multipart/form-data' => {%>
 
     <div class="form-field">
         <%= label 'title' => {%>Title<%}%><br />
@@ -32,6 +32,12 @@
         <%= label 'description' => {%>Description<%}%><br />
         <textarea name="description"><%= param 'description' %></textarea><br />
         <%= error 'description' %>
+    </div>
+
+    <div class="form-field">
+        <%= label 'icon' => {%>Icon<%}%><br />
+        <%= input 'icon', type => 'file' %><br />
+        <%= error 'icon' %>
     </div>
 
     <%= input 'submit', type => 'submit' %>
